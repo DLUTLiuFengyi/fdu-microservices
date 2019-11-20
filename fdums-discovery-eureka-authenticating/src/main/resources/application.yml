@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: fdums-discovery-eureka-authenticating-lfy
+server:
+  port: 8761
+
+security:
+  basic:
+    enabled: true
+  user:
+    name: user
+    password: password321
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://password321@localhost:8761/eureka/
