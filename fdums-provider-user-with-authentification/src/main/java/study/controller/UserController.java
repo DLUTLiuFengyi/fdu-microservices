@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import study.entity.User;
 import study.repository.UserRepository;
-import sun.plugin.liveconnect.SecurityContextHelper;
 
 import java.util.Collection;
 

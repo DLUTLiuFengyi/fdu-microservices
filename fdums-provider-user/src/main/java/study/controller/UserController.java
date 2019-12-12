@@ -18,4 +18,9 @@ public class UserController {
         User findOne = this.userRepository.findOne(id);
         return findOne;
     }
+
+    @GetMapping("/get")
+    public User get(User user){
+        return this.userRepository.findOne(user.getId());
+    }
 }
