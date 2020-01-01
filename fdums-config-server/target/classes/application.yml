@@ -1,0 +1,12 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: fdums-config-server-lfy
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/DLUTLiuFengyi/spring-cloud-config-repository
+          username: DLUTLiuFengyi
+          password: g20121731

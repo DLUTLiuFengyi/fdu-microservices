@@ -1,0 +1,9 @@
+server:
+  port: 8010
+spirng:
+  application:
+    name: fdums-consumer-movie-lfy
+  logging:
+    level:
+      root: INFO
+      org.springframework.servlet.DispatcherServlet: DEBUG
