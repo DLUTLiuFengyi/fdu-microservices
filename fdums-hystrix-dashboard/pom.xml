@@ -12,7 +12,7 @@
     </parent>
 
     <groupId>fdu-microservices</groupId>
-    <artifactId>fdums-hystrix-dashboard</artifactId>
+    <artifactId>fdums-hystrix-dashboard-compose</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -52,6 +52,19 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <!-- 添加docker-maven插件 -->
+            <plugin>
+                <groupId>com.spotify</groupId> <artifactId>docker-maven-plugin</artifactId>
+                <version>0.4.13</version>
+                <configuration>
+                    <imageName>study-repository/${project.artifactId}:${project.version}</imageName> <forceTages>true</forceTages> <baseImage>java</baseImage> <entryPoint>["java","-jar","/${project.build.finalName}.jar"]</entryPoint> <resoureces> <resourece> <targetPath>/</targetPath>
+                    <directory>${project.build.directory}</directory>
+                    <include>${project.build.finalName}.jar</include>
+                </resourece>
+                </resoureces>
+                </configuration>
             </plugin>
         </plugins>
     </build>
